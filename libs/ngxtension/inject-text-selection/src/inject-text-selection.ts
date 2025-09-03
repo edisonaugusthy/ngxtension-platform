@@ -1,10 +1,11 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-	computed,
-	DestroyRef,
-	inject,
-	Injectable,
-	signal,
+  computed,
+  DestroyRef,
+  inject,
+  Injectable,
+  signal,
+  DOCUMENT
 } from '@angular/core';
 import { explicitEffect } from 'ngxtension/explicit-effect';
 

@@ -1,9 +1,10 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-	Injector,
-	inject,
-	runInInjectionContext,
-	type Signal,
+  Injector,
+  inject,
+  runInInjectionContext,
+  type Signal,
+  DOCUMENT
 } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { assertInjector } from 'ngxtension/assert-injector';

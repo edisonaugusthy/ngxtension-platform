@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { inject, Injector } from '@angular/core';
+
+import { inject, Injector, DOCUMENT } from '@angular/core';
 import { assertInjector } from 'ngxtension/assert-injector';
 import { fromEvent, map, merge, shareReplay } from 'rxjs';
 

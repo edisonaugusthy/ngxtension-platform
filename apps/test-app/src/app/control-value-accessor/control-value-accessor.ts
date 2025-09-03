@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, inject } from '@angular/core';
 import {
 	FormBuilder,
@@ -111,12 +111,11 @@ export class UserSelect {
 	selector: 'ngxtension-platform-control-value-accessor',
 	standalone: true,
 	imports: [
-		CommonModule,
-		FormsModule,
-		ReactiveFormsModule,
-		CustomInput,
-		UserSelect,
-	],
+    FormsModule,
+    ReactiveFormsModule,
+    CustomInput,
+    UserSelect
+],
 	template: `
 		<section>
 			<h2>Without Control</h2>

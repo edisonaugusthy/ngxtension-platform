@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { inject, signal, type Injector, type Signal } from '@angular/core';
+
+import { inject, signal, type Injector, type Signal, DOCUMENT } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { assertInjector } from 'ngxtension/assert-injector';
 import { fromEvent, map, merge, startWith } from 'rxjs';

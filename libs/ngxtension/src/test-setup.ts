@@ -1,19 +1,15 @@
-// @ts-expect-error https://thymikee.github.io/jest-preset-angular/docs/getting-started/test-environment
-globalThis.ngJest = {
-	testEnvironmentOptions: {
-		errorOnUnknownElements: true,
-		errorOnUnknownProperties: true,
-	},
-};
-
 import {
 	REACTIVE_NODE,
 	ReactiveNode,
 	setActiveConsumer,
 } from '@angular/core/primitives/signals';
 import { TestBed } from '@angular/core/testing';
-import 'jest-preset-angular/setup-jest';
+import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';
 
+setupZoneTestEnv({
+	errorOnUnknownElements: true,
+	errorOnUnknownProperties: true,
+});
 declare global {
 	namespace jest {
 		interface It {
@@ -54,10 +50,10 @@ expect.extend({
 			setActiveConsumer(prevConsumer);
 		}
 
-		if (reactiveNode.producerNode?.length) {
+		if (reactiveNode.producers) {
 			return {
 				message: () =>
-					`Expected to be reactive pure: Found ${reactiveNode.producerNode?.length} producers`,
+					`Expected to be reactive pure: Found ${reactiveNode.producers} producers`,
 				pass: false,
 			};
 		}

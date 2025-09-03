@@ -1,14 +1,15 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-	DestroyRef,
-	Directive,
-	ElementRef,
-	EventEmitter,
-	Input,
-	NgZone,
-	Output,
-	inject,
-	type OnInit,
+  DestroyRef,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  Input,
+  NgZone,
+  Output,
+  inject,
+  type OnInit,
+  DOCUMENT
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { createInjectionToken } from 'ngxtension/create-injection-token';

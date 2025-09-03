@@ -24,6 +24,7 @@ describe('convert-entry-point-to-project generator', () => {
 			spec: false,
 			skipTests: true,
 			skipModule: true,
+			directory: entryPoint,
 			unitTestRunner: UnitTestRunner.None,
 		});
 
@@ -50,7 +51,7 @@ describe('convert-entry-point-to-project generator', () => {
 		await setup();
 		await expect(
 			initGenerator(tree, { name: entryPoint, project: 'any' }),
-		).rejects.toThrowError(/cannot find configuration for 'any'/i);
+		).rejects.toThrow(/cannot find configuration for 'any'/i);
 	});
 
 	it('should work properly', async () => {

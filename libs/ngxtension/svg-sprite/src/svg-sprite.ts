@@ -1,17 +1,18 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-	Directive,
-	ENVIRONMENT_INITIALIZER,
-	ElementRef,
-	Injectable,
-	Input,
-	NgZone,
-	booleanAttribute,
-	computed,
-	inject,
-	makeEnvironmentProviders,
-	signal,
-	type OnInit,
+  Directive,
+  ENVIRONMENT_INITIALIZER,
+  ElementRef,
+  Injectable,
+  Input,
+  NgZone,
+  booleanAttribute,
+  computed,
+  inject,
+  makeEnvironmentProviders,
+  signal,
+  type OnInit,
+  DOCUMENT
 } from '@angular/core';
 import { injectAutoEffect } from 'ngxtension/auto-effect';
 import { derivedFrom } from 'ngxtension/derived-from';

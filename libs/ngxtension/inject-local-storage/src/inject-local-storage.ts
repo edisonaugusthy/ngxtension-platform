@@ -1,14 +1,15 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
-	computed,
-	DestroyRef,
-	inject,
-	InjectionToken,
-	type Injector,
-	Signal,
-	signal,
-	untracked,
-	type WritableSignal,
+  computed,
+  DestroyRef,
+  inject,
+  InjectionToken,
+  type Injector,
+  Signal,
+  signal,
+  untracked,
+  type WritableSignal,
+  DOCUMENT
 } from '@angular/core';
 import { SIGNAL, SignalNode } from '@angular/core/primitives/signals';
 import { assertInjector } from 'ngxtension/assert-injector';

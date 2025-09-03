@@ -3,16 +3,15 @@
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "libs/ngxtension/src",
 	"prefix": "libs/ngxtension-platform",
-	"tags": [],
 	"projectType": "library",
 	"release": {
 		"version": {
-			"generatorOptions": {
-				"packageRoot": "dist/{projectRoot}",
-				"currentVersionResolver": "git-tag"
-			}
+			"currentVersionResolver": "git-tag",
+			"preserveLocalDependencyProtocols": false,
+			"manifestRootsToUpdate": ["dist/{projectRoot}"]
 		}
 	},
+	"tags": [],
 	"targets": {
 		"build": {
 			"executor": "@nx/angular:package",

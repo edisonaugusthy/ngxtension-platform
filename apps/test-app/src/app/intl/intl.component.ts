@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import {
 	DisplayNamesPipe,
@@ -10,11 +10,10 @@ import {
 	selector: 'ngxtension-platform-intl',
 	standalone: true,
 	imports: [
-		CommonModule,
-		DisplayNamesPipe,
-		PluralRulesPipe,
-		RelativeTimeFormatPipe,
-	],
+    DisplayNamesPipe,
+    PluralRulesPipe,
+    RelativeTimeFormatPipe
+],
 	template: `
 		<h2>Plural Rules</h2>
 		<p>

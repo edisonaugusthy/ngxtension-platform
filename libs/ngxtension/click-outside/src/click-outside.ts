@@ -1,12 +1,13 @@
-import { DOCUMENT } from '@angular/common';
+
 import type { OnInit } from '@angular/core';
 import {
-	Directive,
-	ElementRef,
-	EventEmitter,
-	inject,
-	NgZone,
-	Output,
+  Directive,
+  ElementRef,
+  EventEmitter,
+  inject,
+  NgZone,
+  Output,
+  DOCUMENT
 } from '@angular/core';
 import { createInjectionToken } from 'ngxtension/create-injection-token';
 import { injectDestroy } from 'ngxtension/inject-destroy';

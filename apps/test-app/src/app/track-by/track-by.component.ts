@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+
 import {
 	Component,
 	DestroyRef,
@@ -13,34 +13,40 @@ import { TrackById, TrackByProp } from 'ngxtension/trackby-id-prop';
 	standalone: true,
 	template: `
 		<ul #parentNoTrackBy>
-			<li *ngFor="let person of people">
-				{{ person.id }}. {{ person.firstName }} {{ person.lastName }}
-			</li>
+		  @for (person of people; track person) {
+		    <li>
+		      {{ person.id }}. {{ person.firstName }} {{ person.lastName }}
+		    </li>
+		  }
 		</ul>
 		<hr />
 		<ul #parentTrackBy>
-			<li *ngFor="let person of people; trackById">
-				{{ person.id }}. {{ person.firstName }} {{ person.lastName }}
-			</li>
+		  @for (person of people; track person) {
+		    <li>
+		      {{ person.id }}. {{ person.firstName }} {{ person.lastName }}
+		    </li>
+		  }
 		</ul>
 		<ul #parentTrackByProp>
-			<li *ngFor="let person of people; trackByProp: 'firstName'">
-				{{ person.id }}. {{ person.firstName }} {{ person.lastName }}
-			</li>
+		  @for (person of people; track person) {
+		    <li>
+		      {{ person.id }}. {{ person.firstName }} {{ person.lastName }}
+		    </li>
+		  }
 		</ul>
 		<button (click)="add()">add</button>
 		<hr />
 		<p id="without-track-by">
-			Without TrackBy mutations: {{ mutationsLength.withoutTrackBy() }}
+		  Without TrackBy mutations: {{ mutationsLength.withoutTrackBy() }}
 		</p>
 		<p id="with-track-by">
-			With TrackBy mutations: {{ mutationsLength.withTrackBy() }}
+		  With TrackBy mutations: {{ mutationsLength.withTrackBy() }}
 		</p>
 		<p id="with-track-by-prop">
-			With TrackBy prop mutations: {{ mutationsLength.withTrackByProp() }}
+		  With TrackBy prop mutations: {{ mutationsLength.withTrackByProp() }}
 		</p>
-	`,
-	imports: [NgFor, TrackById, TrackByProp],
+		`,
+	imports: [TrackById, TrackByProp],
 })
 export default class TrackByTest {
 	people = [

@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ifValidator } from 'ngxtension/if-validator';
 
 @Component({
 	standalone: true,
-	imports: [CommonModule, ReactiveFormsModule],
+	imports: [ReactiveFormsModule],
 	host: {
 		style: 'display: block; margin: 12px',
 	},
